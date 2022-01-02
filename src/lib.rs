@@ -251,15 +251,15 @@ extern crate rand;
 #[cfg(feature = "serde")]
 extern crate serde_crate as serde;
 extern crate sha2;
-extern crate zeroize;
+//extern crate zeroize;
 
 #[cfg(all(any(feature = "batch", feature = "batch_deterministic"), any(feature = "std", feature = "alloc")))]
 mod batch;
 mod constants;
-mod keypair;
+//mod keypair;
 mod errors;
 mod public;
-mod secret;
+//mod secret;
 mod signature;
 
 pub use curve25519_dalek::digest::Digest;
@@ -268,9 +268,9 @@ pub use curve25519_dalek::digest::Digest;
 pub use crate::batch::*;
 pub use crate::constants::*;
 pub use crate::errors::*;
-pub use crate::keypair::*;
+//pub use crate::keypair::*;
 pub use crate::public::*;
-pub use crate::secret::*;
+//pub use crate::secret::*;
 
 // Re-export the `Signer` and `Verifier` traits from the `signature` crate
 pub use ed25519::signature::{Signer, Verifier};

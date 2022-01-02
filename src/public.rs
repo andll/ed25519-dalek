@@ -34,7 +34,7 @@ use serde::{Deserializer, Serializer};
 
 use crate::constants::*;
 use crate::errors::*;
-use crate::secret::*;
+//use crate::secret::*;
 use crate::signature::*;
 
 /// An ed25519 public key.
@@ -52,7 +52,7 @@ impl AsRef<[u8]> for PublicKey {
         self.as_bytes()
     }
 }
-
+/*
 impl<'a> From<&'a SecretKey> for PublicKey {
     /// Derive this public key from its corresponding `SecretKey`.
     fn from(secret_key: &SecretKey) -> PublicKey {
@@ -77,7 +77,7 @@ impl<'a> From<&'a ExpandedSecretKey> for PublicKey {
         PublicKey::mangle_scalar_bits_and_multiply_by_basepoint_to_produce_public_key(&mut bits)
     }
 }
-
+*/
 impl PublicKey {
     /// Convert this public key to a byte array.
     #[inline]
